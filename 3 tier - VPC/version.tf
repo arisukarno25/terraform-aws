@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = var.aws_region #follow the `variables.tf`
+  region  = var.aws_region #follow the 'variables.tf'
   profile = "default"      #follow the aws configure 
 }
 
