@@ -1,6 +1,6 @@
 module "vpc-module" { #module name can be changed
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.14.2"
+  version = "3.14.2" #module version
 
   #VPC resource 
   name            = "vpc-demo"
