@@ -29,7 +29,7 @@ module "vpc-module" { #module name can be changed
   private_subnet_tags = {
     Type = "private-subnets"
   }
-  databse_subnet_tags = {
+  database_subnet_tags = {
     Type = "database-subnets"
   }
   tags = {
