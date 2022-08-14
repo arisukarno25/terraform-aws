@@ -32,7 +32,7 @@ module "vpc-module" { #module name can be changed
   database_subnet_tags = {
     Type = "database-subnets"
   }
-  tags = {
+  tags = { #will be applied to all resources was created
     Owner        = "Ari"
     Environment = "vpc-demo"
   }
