@@ -3,7 +3,7 @@ module "vpc-demo" {
   version = "3.14.2"
 
   #vpc 
-  name            = "${locals.name}-${var.vpc_name}"
+  name            = "${local.name}-${var.vpc_name}"
   cidr            = var.vpc_cidr_block
   azs             = var.vpc_availability_zones
   public_subnets  = var.vpc_public_subnets
@@ -11,7 +11,7 @@ module "vpc-demo" {
 
   #database 
   database_subnets                   = var.vpc_database_subnets
-  create_database_subnet_groups      = var.vpc_database_subnet_groups
+  create_database_subnet_group       = var.vpc_database_subnet_groups
   create_database_subnet_route_table = var.vpc_database_subnet_route_tables
 
   #NAT 
@@ -22,8 +22,8 @@ module "vpc-demo" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
-  tags     = locals.common_tags
-  vpc_tags = common_tags
+  tags     = local.common_tags
+  vpc_tags = local.common_tags
 
   #additional tags 
   public_subnet_tags = {

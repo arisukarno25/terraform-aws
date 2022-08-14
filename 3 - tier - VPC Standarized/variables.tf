@@ -8,7 +8,7 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
-variable "divsion" {
+variable "division" {
   description = "bussines division that related"
   type        = string
   default     = "SAP"

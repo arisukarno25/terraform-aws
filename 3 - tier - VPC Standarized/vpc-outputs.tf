@@ -1,10 +1,10 @@
 output "vpc_id" {
-  desctiption = "VPC ID"
+  description = "VPC ID"
   value       = module.vpc-demo.vpc_id
 }
 output "vpc_cidr_block" {
   description = "VPC CIDR Bloc"
-  value       = module.vpc-demo.cidr
+  value       = module.vpc-demo.vpc_cidr_block #you can't ref by cidr cause there is not support for that module, so you have to follow the module's outputs
 }
 output "vpc_private_subnets" {
   description = "VPC Private Subnet"
